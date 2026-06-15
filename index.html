@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain View SDA Church Kantafu | Seventh-day Adventist Kenya</title>
+  <meta name="description" content="Welcome to Mountain View Seventh-day Adventist Church in Kantafu, Kenya. Join us every Saturday for Sabbath School at 9:00 AM and Divine Service at 11:00 AM. A warm, Spirit-led community rooted in faith, love and purpose." />
+  <meta name="keywords" content="Mountain View SDA Church, Kantafu, Seventh Day Adventist, SDA Church Kenya, Kantafu church, Adventist Kantafu, SDA Kantafu Kenya, church Kantafu, Christian church Kenya" />
+  <meta name="author" content="Mountain View Seventh-day Adventist Church Kantafu" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="geo.region" content="KE" />
+  <meta name="geo.placename" content="Kantafu, Kenya" />
+
+  <!-- Open Graph (for WhatsApp, Facebook sharing) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mountainviewsdakantafu.netlify.app" />
+  <meta property="og:title" content="Mountain View SDA Church Kantafu" />
+  <meta property="og:description" content="A warm, Spirit-led Seventh-day Adventist community in Kantafu, Kenya. Join us every Saturday for worship, Bible study and fellowship." />
+  <meta property="og:locale" content="en_KE" />
+
+  <!-- Twitter/X sharing -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mountain View SDA Church Kantafu" />
+  <meta name="twitter:description" content="Seventh-day Adventist Church in Kantafu, Kenya. Sabbath School 9AM · Divine Service 11AM every Saturday." />
+
+  <!-- Google Structured Data (helps Google understand the church) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Church",
+    "name": "Mountain View Seventh-day Adventist Church Kantafu",
+    "alternateName": "Mountain View SDA Church Kantafu",
+    "url": "https://mountainviewsdakantafu.netlify.app",
+    "description": "A warm, Spirit-led Seventh-day Adventist community in Kantafu, Kenya, dedicated to whole-person ministry spiritually, physically and socially.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kantafu",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "addressCountry": "Kenya"
+    },
+    "openingHours": [
+      "Sa 09:00-13:00"
+    ],
+    "event": [
+      {
+        "@type": "Event",
+        "name": "Sabbath School",
+        "startTime": "09:00",
+        "endTime": "11:00",
+        "dayOfWeek": "Saturday"
+      },
+      {
+        "@type": "Event",
+        "name": "Divine Service",
+        "startTime": "11:00",
+        "endTime": "13:00",
+        "dayOfWeek": "Saturday"
+      }
+    ],
+    "sameAs": []
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-deep: #1A3D2B;
+      --green-mid:  #2E6B4A;
+      --green-light: #4A9E6F;
+      --gold:       #C8973A;
+      --gold-light: #F0C97A;
+      --cream:      #F9F6F0;
+      --white:      #FFFFFF;
+      --charcoal:   #1C1C1C;
+      --muted:      #5A6A60;
+      --border:     #D8E4DC;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(26,61,43,0.97);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      max-width: 260px;
+    }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      flex-direction: column; gap: 5px;
+    }
+    .nav-toggle span {
+      display: block; width: 24px; height: 2px;
+      background: var(--gold-light);
+    }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-mid) 55%, #1e4a32 100%);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    #home::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(200,151,58,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 1.2rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      color: var(--white);
+      line-height: 1.15;
+      max-width: 700px;
+      margin-bottom: 0.5rem;
+    }
+    .hero-title span { color: var(--gold-light); }
+    .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,0.72);
+      max-width: 440px; margin: 1.2rem auto 2.4rem;
+      font-weight: 300;
+    }
+    .hero-cta {
+      display: inline-flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+    }
+    .btn {
+      display: inline-block; text-decoration: none;
+      padding: 0.75rem 2rem; border-radius: 3px;
+      font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+      transition: all 0.2s;
+    }
+    .btn-gold {
+      background: var(--gold); color: var(--white);
+    }
+    .btn-gold:hover { background: var(--gold-light); color: var(--charcoal); }
+    .btn-outline {
+      border: 1.5px solid rgba(255,255,255,0.4); color: var(--white);
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+    .scroll-hint {
+      position: absolute; bottom: 2rem;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 0.12em;
+    }
+    .scroll-hint::after {
+      content: '';
+      display: block; width: 1px; height: 36px;
+      background: rgba(255,255,255,0.25);
+      animation: scrollLine 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%, 100% { opacity: 0.25; transform: scaleY(1); }
+      50%       { opacity: 0.8; transform: scaleY(0.5); }
+    }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 90px 5%; }
+    .section-label {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--green-light);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      color: var(--green-deep);
+      max-width: 560px;
+      margin-bottom: 1.2rem;
+    }
+    .section-body {
+      font-size: 1rem; color: var(--muted); max-width: 580px;
+      line-height: 1.75;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+      align-items: center; max-width: 1100px; margin: 0 auto;
+    }
+    .about-visual {
+      background: linear-gradient(135deg, var(--green-deep), var(--green-light));
+      border-radius: 4px;
+      aspect-ratio: 4/3;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 1rem; color: rgba(255,255,255,0.9);
+    }
+    .about-visual svg { width: 64px; opacity: 0.85; }
+    .about-visual p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; text-align: center; padding: 0 2rem;
+    }
+    .values-list {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;
+    }
+    .value-chip {
+      background: var(--cream); border-left: 3px solid var(--gold);
+      padding: 0.7rem 1rem; border-radius: 2px;
+      font-size: 0.85rem; font-weight: 500; color: var(--green-deep);
+    }
+
+    /* ── SERVICE TIMES ── */
+    #services { background: var(--green-deep); }
+    #services .section-title { color: var(--white); max-width: 100%; }
+    #services .section-label { color: var(--gold-light); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 3rem; max-width: 1100px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px; padding: 2rem 1.5rem;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .service-card:hover { background: rgba(255,255,255,0.1); }
+    .service-day {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.5rem;
+    }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; color: var(--white); margin-bottom: 0.5rem;
+    }
+    .service-time {
+      font-size: 1.6rem; font-weight: 700; color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .service-note { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    /* ── EVENTS ── */
+    #events { background: var(--cream); }
+    .events-inner { max-width: 900px; margin: 0 auto; }
+    .events-list { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2.5rem; }
+    .event-card {
+      background: var(--white); border-radius: 4px;
+      display: flex; align-items: stretch; overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .event-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .event-date-block {
+      background: var(--green-deep); color: var(--white);
+      min-width: 80px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; padding: 1rem;
+    }
+    .event-month { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.7; }
+    .event-day-num { font-family: 'Playfair Display', serif; font-size: 2rem; line-height: 1; }
+    .event-info { padding: 1.2rem 1.5rem; }
+    .event-title { font-weight: 600; color: var(--green-deep); margin-bottom: 0.25rem; }
+    .event-meta { font-size: 0.82rem; color: var(--muted); }
+
+    /* ── SERMONS ── */
+    #sermons { background: var(--white); }
+    .sermons-inner { max-width: 1100px; margin: 0 auto; }
+    .sermons-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .sermon-card {
+      border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .sermon-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .sermon-thumb {
+      background: linear-gradient(135deg, var(--green-mid), var(--green-light));
+      height: 150px; display: flex; align-items: center; justify-content: center;
+    }
+    .sermon-thumb svg { width: 48px; opacity: 0.7; }
+    .sermon-info { padding: 1.2rem; }
+    .sermon-series { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .sermon-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--green-deep); margin-bottom: 0.4rem; }
+    .sermon-meta { font-size: 0.8rem; color: var(--muted); }
+    .sermon-link {
+      display: inline-block; margin-top: 0.8rem;
+      font-size: 0.82rem; font-weight: 600; color: var(--green-mid);
+      text-decoration: none; letter-spacing: 0.04em;
+    }
+    .sermon-link:hover { color: var(--gold); }
+
+    /* ── GIVE ── */
+    #give {
+      background: linear-gradient(135deg, var(--green-deep) 0%, #163324 100%);
+      text-align: center;
+    }
+    #give .section-label { color: var(--gold-light); text-align: center; }
+    #give .section-title { color: var(--white); margin: 0 auto 1rem; text-align: center; }
+    #give .section-body { color: rgba(255,255,255,0.65); margin: 0 auto 2.5rem; text-align: center; }
+    .give-options {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .give-option {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px; padding: 1.5rem 2rem; min-width: 180px;
+      text-align: center;
+    }
+    .give-option-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .give-option-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.25rem; }
+    .give-option-detail { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--cream); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+      max-width: 1000px; margin: 3rem auto 0;
+    }
+    .contact-info h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: var(--green-deep); margin-bottom: 1.5rem;
+    }
+    .contact-item {
+      display: flex; gap: 1rem; margin-bottom: 1.4rem;
+    }
+    .contact-icon {
+      width: 40px; height: 40px; background: var(--green-deep);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { width: 18px; }
+    .contact-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+    .contact-value { font-size: 0.95rem; color: var(--green-deep); font-weight: 500; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-form input,
+    .contact-form textarea {
+      border: 1.5px solid var(--border); border-radius: 3px;
+      padding: 0.8rem 1rem; font-family: 'Inter', sans-serif;
+      font-size: 0.9rem; color: var(--charcoal);
+      background: var(--white); outline: none;
+      transition: border-color 0.2s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus { border-color: var(--green-mid); }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
+    .btn-green {
+      background: var(--green-mid); color: var(--white);
+      border: none; cursor: pointer; width: 100%;
+      padding: 0.85rem; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+      border-radius: 3px; transition: background 0.2s;
+    }
+    .btn-green:hover { background: var(--green-deep); }
+
+    /* ── MAP PLACEHOLDER ── */
+    .map-placeholder {
+      background: var(--border); border-radius: 4px; height: 220px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1.5rem; color: var(--muted); font-size: 0.85rem;
+      flex-direction: column; gap: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal); color: rgba(255,255,255,0.5);
+      text-align: center; padding: 2.5rem 5%;
+      font-size: 0.82rem;
+    }
+    footer strong { color: rgba(255,255,255,0.8); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--green-deep); padding: 1.5rem 5%; gap: 1.2rem; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-visual { aspect-ratio: 3/2; }
+      section { padding: 60px 5%; }
+      .values-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- DAILY VERSE BANNER -->
+<div id="verseBanner" style="background: var(--green-deep); border-bottom: 2px solid var(--gold); padding: 0.6rem 5%; display:flex; align-items:center; justify-content:center; gap:1rem; min-height:44px;">
+  <span style="font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-light); white-space:nowrap;">Verse of the Day</span>
+  <span id="verseOfDay" style="font-family:'Playfair Display',serif; font-size:0.92rem; color:white; text-align:center; font-style:italic;"></span>
+  <span id="verseRef" style="font-size:0.72rem; color:var(--gold-light); white-space:nowrap; font-weight:600;"></span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Mountain View<br>SDA Church · Kantafu</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#sermons">Sermons</a></li>
+    <li><a href="#give">Give</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex; align-items:center; gap:0.8rem;">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <button id="resourcesBtn" onclick="openResources()" aria-label="Open resources menu" style="background:rgba(255,255,255,0.1); border:1.5px solid rgba(255,255,255,0.25); border-radius:6px; width:40px; height:40px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+      <span style="display:block; width:5px; height:5px; background:var(--gold-light); border-radius:50%;"></span>
+      <span style="display:block; width:5px; height:5px; background:var(--gold-light); border-radius:50%;"></span>
+      <span style="display:block; width:5px; height:5px; background:var(--gold-light); border-radius:50%;"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     RESOURCES FULL-SCREEN OVERLAY MENU
+══════════════════════════════════════════ -->
+<div id="resourcesOverlay" style="display:none; position:fixed; inset:0; z-index:999; background:#0d2618; overflow-y:auto;">
+  
+  <!-- Overlay Header -->
+  <div style="position:sticky; top:0; background:#0d2618; border-bottom:1px solid rgba(255,255,255,0.1); padding:0 5%; height:64px; display:flex; align-items:center; justify-content:space-between; z-index:10;">
+    <div style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.1rem;">Resources & Learning</div>
+    <button onclick="closeResources()" style="background:rgba(255,255,255,0.08); border:none; border-radius:50%; width:40px; height:40px; color:white; font-size:1.4rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">&times;</button>
+  </div>
+
+  <!-- Search bar -->
+  <div style="padding:2.5rem 5% 1.5rem;">
+    <p style="font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); margin-bottom:0.8rem; text-align:center;">Find what you're looking for</p>
+    <div style="max-width:560px; margin:0 auto; display:flex; gap:0.6rem;">
+      <input id="resourceSearch" type="text" placeholder="Search topics, Bible questions, ministries…" oninput="filterResources(this.value)" style="flex:1; background:rgba(255,255,255,0.08); border:1.5px solid rgba(255,255,255,0.15); border-radius:6px; padding:0.85rem 1.2rem; color:white; font-family:'Inter',sans-serif; font-size:0.95rem; outline:none;" />
+      <button style="background:var(--gold); border:none; border-radius:6px; padding:0 1.2rem; color:white; font-size:1.1rem; cursor:pointer;">🔍</button>
+    </div>
+    <!-- Quick tags -->
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin-top:1rem;">
+      <button onclick="filterResources('prayer')" class="res-tag">'Why pray'</button>
+      <button onclick="filterResources('salvation')" class="res-tag">'How to be saved'</button>
+      <button onclick="filterResources('sabbath')" class="res-tag">'What is the Sabbath'</button>
+      <button onclick="filterResources('soul')" class="res-tag">'What is the soul'</button>
+      <button onclick="filterResources('')" class="res-tag" style="background:rgba(255,255,255,0.05);">Show all</button>
+    </div>
+  </div>
+
+  <!-- Resource Cards Grid -->
+  <div id="resourceGrid" style="padding:0.5rem 5% 5rem; display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.2rem; max-width:1200px; margin:0 auto;">
+
+    <!-- Prayer -->
+    <div class="res-card" data-tags="prayer intercession request" onclick="closeAndGo('#prayer')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a3d2b,#2E6B4A);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🙏</div>
+        <h3 class="res-title">Prayer Request</h3>
+        <p class="res-desc">Submit a prayer request. Our team intercedes for every need, confidentially and with faith.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="res-card" data-tags="history sda adventist began 1844 founded" onclick="closeAndGo('#history')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#2c1810,#6b3a2e);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">📜</div>
+        <h3 class="res-title">History of the SDA Church</h3>
+        <p class="res-desc">From the Great Disappointment of 1844 to our congregation in Kantafu — our full heritage.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Salvation -->
+    <div class="res-card" data-tags="salvation saved christ grace faith jesus" onclick="closeAndGo('#salvation')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a2d4a,#2e4a7a);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">✝️</div>
+        <h3 class="res-title">Salvation of Christ</h3>
+        <p class="res-desc">How are we saved? What did Jesus do for us? Understand the Gospel clearly from Scripture.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Ellen G. White -->
+    <div class="res-card" data-tags="ellen white spirit prophecy writings books" onclick="closeAndGo('#ellen-white')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#2a1a3d,#4a2e6b);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">✍️</div>
+        <h3 class="res-title">Ellen G. White</h3>
+        <p class="res-desc">Her life, her prophetic gift, and key doctrinal contributions — from health reform to The Great Controversy.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- What We Believe -->
+    <div class="res-card" data-tags="believe beliefs fundamental 28 doctrine faith" onclick="closeAndGo('#what-we-believe')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a3a2a,#3a6a4a);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">📖</div>
+        <h3 class="res-title">What We Believe</h3>
+        <p class="res-desc">The 28 Fundamental Beliefs of the Seventh-day Adventist Church — clearly explained with Scripture.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- The Soul -->
+    <div class="res-card" data-tags="soul death sleep immortal heaven what happens" onclick="closeAndGo('#soul')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a2a3d,#2a4a6d);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">💫</div>
+        <h3 class="res-title">What Is the Soul?</h3>
+        <p class="res-desc">What happens when we die? What is the soul, according to the Bible? The truth may surprise you.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- 10 Commandments -->
+    <div class="res-card" data-tags="commandments law sabbath ten exodus" onclick="closeAndGo('#commandments')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#3a2a10,#6b4a1e);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">⛏️</div>
+        <h3 class="res-title">The Ten Commandments</h3>
+        <p class="res-desc">God's eternal moral law — all ten commandments explained with meaning for today's Christian.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Do's & Don'ts -->
+    <div class="res-card" data-tags="dos donts lifestyle diet alcohol tobacco sabbath sda" onclick="closeAndGo('#dos-donts')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1e3a1e,#3a6a3a);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">✅</div>
+        <h3 class="res-title">Do's & Don'ts of the SDA Faith</h3>
+        <p class="res-desc">SDA lifestyle guidelines — diet, Sabbath observance, dress, entertainment and more — rooted in Scripture.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Religious Liberty -->
+    <div class="res-card" data-tags="religious liberty freedom conscience church state" onclick="closeAndGo('#religious-liberty')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#2a1a10,#5a3a20);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">⚖️</div>
+        <h3 class="res-title">Religious Liberty</h3>
+        <p class="res-desc">Why SDAs champion freedom of conscience and the separation of church and state worldwide.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Pathfinders & Youth -->
+    <div class="res-card" data-tags="pathfinders adventurers youth ay club uniform flag" onclick="closeAndGo('#youth')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#10243a,#1a4a6b);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🏕️</div>
+        <h3 class="res-title">Pathfinders & Adventurers</h3>
+        <p class="res-desc">Uniforms, flags, mottos, songs and structure of the SDA youth clubs for children and teens.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Departments -->
+    <div class="res-card" data-tags="departments women men stewardship community services health" onclick="closeAndGo('#departments')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a1a2a,#3a3a5a);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🏢</div>
+        <h3 class="res-title">Church Departments</h3>
+        <p class="res-desc">Women's Ministry, Men's Ministry, Health, Community Services, Music, Stewardship and more.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Famous Members -->
+    <div class="res-card" data-tags="famous sda members ben carson desmond doss celebrities" onclick="closeAndGo('#famous-members')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a3020,#2a5a38);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🌟</div>
+        <h3 class="res-title">Famous SDA Members</h3>
+        <p class="res-desc">World leaders, doctors, artists, and heroes who share the Adventist faith.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Mental Health -->
+    <div class="res-card" data-tags="mental health wellness youth men depression anxiety" onclick="closeAndGo('#spiritual-health')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#1a2a3a,#2a4a5a);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🧠</div>
+        <h3 class="res-title">Mental Wellness</h3>
+        <p class="res-desc">Breaking the stigma — mental health support, resources, and biblical encouragement for youth and men.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Bible Q&A -->
+    <div class="res-card" data-tags="bible question answer qa ai study scripture" onclick="closeAndGo('#bible-qa')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#2a1a10,#4a3a20);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">💬</div>
+        <h3 class="res-title">Get Answers from the Bible</h3>
+        <p class="res-desc">Ask any Bible question and get a Scripture-based answer, powered by AI Bible study tools.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Who We Are -->
+    <div class="res-card" data-tags="who we are identity mission vision church" onclick="closeAndGo('#who-we-are')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#0d2618,#1a4a2e);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🏔️</div>
+        <h3 class="res-title">Who We Are</h3>
+        <p class="res-desc">Our identity, mission and vision as Mountain View SDA Church, Kantafu.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+    <!-- Scholars -->
+    <div class="res-card" data-tags="scholars academics research sda studies university" onclick="closeAndGo('#scholars')">
+      <div class="res-card-bg" style="background:linear-gradient(135deg,#2a2a1a,#4a4a2a);"></div>
+      <div class="res-card-content">
+        <div class="res-icon">🎓</div>
+        <h3 class="res-title">What Scholars Say</h3>
+        <p class="res-desc">Academic and research perspectives on the SDA Church, its health studies, and global impact.</p>
+        <div class="res-arrow">→</div>
+      </div>
+    </div>
+
+  </div><!-- end grid -->
+</div><!-- end overlay -->
+
+<!-- HERO -->
+<section id="home">
+  <p class="hero-eyebrow">Seventh-day Adventist Church · Kantafu</p>
+  <h1 class="hero-title">
+    A Community Rooted in <span>Faith, Love & Purpose</span>
+  </h1>
+  <p class="hero-sub">
+    Welcome to Mountain View — a warm, vibrant family of believers growing together in God's grace.
+  </p>
+  <div class="hero-cta">
+    <a href="#services" class="btn btn-gold">Join Us This Sabbath</a>
+    <a href="#about" class="btn btn-outline">Our Story</a>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 4L4 20v4h4v32h16V40h16v16h16V24h4v-4L32 4z" fill="white" opacity="0.9"/>
+        <rect x="28" y="40" width="8" height="16" fill="rgba(200,151,58,0.6)"/>
+        <rect x="26" y="22" width="12" height="10" rx="1" fill="rgba(200,151,58,0.5)"/>
+      </svg>
+      <p>"A place where everyone belongs"</p>
+    </div>
+    <div>
+      <p class="section-label">Who We Are</p>
+      <h2 class="section-title">Built on the Mountain, Called to the Community</h2>
+      <p class="section-body">
+        Mountain View Seventh-day Adventist Church in Kantafu is a growing, Spirit-led congregation dedicated to whole-person ministry — spiritually, physically, and socially. We believe church is not a building; it's the people we become together.
+      </p>
+      <div class="values-list">
+        <div class="value-chip">🙏 Worship & Prayer</div>
+        <div class="value-chip">📖 Bible Study</div>
+        <div class="value-chip">🤝 Community Service</div>
+        <div class="value-chip">👨‍👩‍👧 Family Ministry</div>
+        <div class="value-chip">🌍 Evangelism</div>
+        <div class="value-chip">❤️ Health & Wholeness</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE TIMES -->
+<section id="services">
+  <p class="section-label">Join Us</p>
+  <h2 class="section-title" style="color:white; max-width:600px;">When We Gather</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-day">Saturday</div>
+      <div class="service-name">Sabbath School</div>
+      <div class="service-time">9:00 AM</div>
+      <div class="service-note">All age groups · Interactive Bible study</div>
+    </div>
+    <div class="service-card">
+      <div class="service-day">Saturday</div>
+      <div class="service-name">Divine Service</div>
+      <div class="service-time">11:00 AM</div>
+      <div class="service-note">Main worship service · All welcome</div>
+    </div>
+    <div class="service-card">
+      <div class="service-day">Wednesday</div>
+      <div class="service-name">Prayer Meeting</div>
+      <div class="service-time">6:30 PM</div>
+      <div class="service-note">Midweek prayer & devotion</div>
+    </div>
+    <div class="service-card">
+      <div class="service-day">Friday</div>
+      <div class="service-name">Vespers</div>
+      <div class="service-time">6:00 PM</div>
+      <div class="service-note">Sabbath welcome service</div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="events-inner">
+    <p class="section-label">What's Coming</p>
+    <h2 class="section-title">Upcoming Events</h2>
+    <div class="events-list">
+      <div class="event-card">
+        <div class="event-date-block">
+          <span class="event-month">Jul</span>
+          <span class="event-day-num">5</span>
+        </div>
+        <div class="event-info">
+          <div class="event-title">Community Health Fair</div>
+          <div class="event-meta">9:00 AM – 3:00 PM · Church Grounds · Free screenings & health advice</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-block">
+          <span class="event-month">Jul</span>
+          <span class="event-day-num">12</span>
+        </div>
+        <div class="event-info">
+          <div class="event-title">Youth Day Program</div>
+          <div class="event-meta">10:00 AM · Main Sanctuary · Teens & young adults leading worship</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-block">
+          <span class="event-month">Jul</span>
+          <span class="event-day-num">19</span>
+        </div>
+        <div class="event-info">
+          <div class="event-title">Evangelistic Series Begins</div>
+          <div class="event-meta">7:00 PM Nightly · Bring a friend · All are welcome</div>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-date-block">
+          <span class="event-month">Aug</span>
+          <span class="event-day-num">2</span>
+        </div>
+        <div class="event-info">
+          <div class="event-title">Family Camp Meeting</div>
+          <div class="event-meta">Full-day event · Worship, fellowship & nature walks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERMONS -->
+<section id="sermons">
+  <div class="sermons-inner">
+    <p class="section-label">Word & Worship</p>
+    <h2 class="section-title">Recent Sermons</h2>
+    <div class="sermons-grid">
+      <div class="sermon-card">
+        <div class="sermon-thumb">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" fill="white" opacity="0.15"/>
+            <polygon points="19,15 37,24 19,33" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="sermon-info">
+          <div class="sermon-series">Faith Series</div>
+          <div class="sermon-title">Mountains That Move</div>
+          <div class="sermon-meta">Pastor Daniel Mwangi · June 7, 2026</div>
+          <a href="#" class="sermon-link">▶ Listen Now →</a>
+        </div>
+      </div>
+      <div class="sermon-card">
+        <div class="sermon-thumb">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" fill="white" opacity="0.15"/>
+            <polygon points="19,15 37,24 19,33" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="sermon-info">
+          <div class="sermon-series">Community & Grace</div>
+          <div class="sermon-title">You Are Not Alone</div>
+          <div class="sermon-meta">Elder Grace Njeri · May 31, 2026</div>
+          <a href="#" class="sermon-link">▶ Listen Now →</a>
+        </div>
+      </div>
+      <div class="sermon-card">
+        <div class="sermon-thumb">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="20" fill="white" opacity="0.15"/>
+            <polygon points="19,15 37,24 19,33" fill="white" opacity="0.8"/>
+          </svg>
+        </div>
+        <div class="sermon-info">
+          <div class="sermon-series">The Sabbath</div>
+          <div class="sermon-title">Rest as Resistance</div>
+          <div class="sermon-meta">Pastor Daniel Mwangi · May 24, 2026</div>
+          <a href="#" class="sermon-link">▶ Listen Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GIVE -->
+<section id="give">
+  <p class="section-label">Generosity</p>
+  <h2 class="section-title">Support the Mission</h2>
+  <p class="section-body">
+    Your giving enables community outreach, education, health ministry, and the proclamation of the Gospel across Kantafu and beyond.
+  </p>
+  <div class="give-options">
+    <div class="give-option">
+      <div class="give-option-icon">📱</div>
+      <div class="give-option-label">M-Pesa</div>
+      <div class="give-option-detail">Paybill: 123456<br>Account: MVSDA</div>
+    </div>
+    <div class="give-option">
+      <div class="give-option-icon">🏦</div>
+      <div class="give-option-label">Bank Transfer</div>
+      <div class="give-option-detail">Ask church treasurer<br>for account details</div>
+    </div>
+    <div class="give-option">
+      <div class="give-option-icon">🧾</div>
+      <div class="give-option-label">Offering Envelope</div>
+      <div class="give-option-detail">Available every<br>Sabbath morning</div>
+    </div>
+  </div>
+  <a href="#contact" class="btn btn-gold">Contact Us to Give</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Find Us</p>
+  <h2 class="section-title">We'd Love to Hear From You</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Visit or Reach Out</h3>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Kantafu, Kenya</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.38 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">+254 700 000 000</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">info@mountainviewsda.org</div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <svg viewBox="0 0 24 24" width="32" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+        </svg>
+        Map · Kantafu, Kenya
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--green-deep);margin-bottom:1.5rem;">Send a Message</h3>
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Email Address" />
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Your message…"></textarea>
+        <button class="btn-green">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER OF SERVICE BULLETIN -->
+<section id="bulletin" style="background: var(--cream);">
+  <p class="section-label">This Sabbath</p>
+  <h2 class="section-title">Order of Service</h2>
+  <p class="section-body" style="margin-bottom:2.5rem;">Divine Service · Saturday, June 21, 2026 · 11:00 AM</p>
+
+  <div style="max-width:680px; margin:0 auto;">
+    <!-- Bulletin Card -->
+    <div style="background:white; border-radius:6px; overflow:hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.10);">
+
+      <!-- Card Header -->
+      <div style="background: var(--green-deep); padding: 2rem; text-align:center;">
+        <p style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); margin-bottom:0.4rem;">Mountain View SDA Church · Kantafu</p>
+        <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.5rem; margin-bottom:0.3rem;">Sabbath Bulletin</h3>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">June 21, 2026 &nbsp;·&nbsp; Divine Service 11:00 AM</p>
+      </div>
+
+      <!-- Sermon Banner -->
+      <div style="background: var(--gold); padding:1.2rem 2rem; text-align:center;">
+        <p style="font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.8); margin-bottom:0.2rem;">Today's Sermon</p>
+        <p style="font-family:'Playfair Display',serif; font-size:1.3rem; color:white; font-weight:700;">"Walking by Faith, Not by Sight"</p>
+        <p style="font-size:0.82rem; color:rgba(255,255,255,0.85); margin-top:0.2rem;">2 Corinthians 5:7 &nbsp;·&nbsp; Pastor Samuel Kariuki</p>
+      </div>
+
+      <!-- Program Items -->
+      <div style="padding: 1.5rem 2rem;">
+        <table style="width:100%; border-collapse:collapse;">
+          <tbody id="bulletinItems">
+            <tr class="b-row"><td class="b-time">10:00 AM</td><td class="b-icon">🎵</td><td class="b-item"><strong>Sabbath School</strong><br><span>All age groups · Interactive Bible study</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:00 AM</td><td class="b-icon">🙏</td><td class="b-item"><strong>Call to Worship & Opening Prayer</strong><br><span>Elder John Muthoni</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:10 AM</td><td class="b-icon">📖</td><td class="b-item"><strong>Opening Hymn</strong><br><span>Hymn #1 — "Praise to the Lord"</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:18 AM</td><td class="b-icon">📜</td><td class="b-item"><strong>Scripture Reading</strong><br><span>2 Corinthians 5:1–10</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:22 AM</td><td class="b-icon">🎶</td><td class="b-item"><strong>Choir Anthem</strong><br><span>"Great Is Thy Faithfulness" · Mountain View Choir</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:30 AM</td><td class="b-icon">🙏</td><td class="b-item"><strong>Intercessory Prayer</strong><br><span>Deaconess Mary Wanjiku</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:38 AM</td><td class="b-icon">📢</td><td class="b-item"><strong>Announcements</strong><br><span>Church Secretary</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:45 AM</td><td class="b-icon">💰</td><td class="b-item"><strong>Offering & Offering Appeal</strong><br><span>This week: Local Church Budget</span></td></tr>
+            <tr class="b-row"><td class="b-time">11:52 AM</td><td class="b-icon">🎵</td><td class="b-item"><strong>Special Music</strong><br><span>Youth Music Group</span></td></tr>
+            <tr class="b-row" style="background:rgba(26,61,43,0.04);"><td class="b-time">12:00 PM</td><td class="b-icon">✝️</td><td class="b-item"><strong>Sermon</strong><br><span>"Walking by Faith, Not by Sight" · Pastor Samuel Kariuki</span></td></tr>
+            <tr class="b-row"><td class="b-time">12:45 PM</td><td class="b-icon">📖</td><td class="b-item"><strong>Closing Hymn</strong><br><span>Hymn #633 — "When We All Get to Heaven"</span></td></tr>
+            <tr class="b-row"><td class="b-time">12:50 PM</td><td class="b-icon">✋</td><td class="b-item"><strong>Benediction</strong><br><span>Pastor Samuel Kariuki</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer note -->
+      <div style="background:var(--cream); padding:1rem 2rem; text-align:center; border-top:1px solid var(--border);">
+        <p style="font-size:0.78rem; color:var(--muted);">🙏 Welcome to worship! Please silence your phones. Children's classes available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .b-row { border-bottom: 1px solid var(--border); }
+  .b-row:last-child { border-bottom: none; }
+  .b-time { padding: 0.85rem 0.5rem 0.85rem 0; font-size:0.75rem; font-weight:600; color:var(--gold); white-space:nowrap; vertical-align:top; width:70px; }
+  .b-icon { padding: 0.85rem 0.8rem; font-size:1rem; vertical-align:top; width:30px; }
+  .b-item { padding: 0.85rem 0 0.85rem 0; font-size:0.88rem; color:var(--charcoal); vertical-align:top; }
+  .b-item span { font-size:0.78rem; color:var(--muted); }
+</style>
+
+<!-- PROJECTOR / BIBLE DISPLAY -->
+<section id="projector" style="background: #0a0a0a; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 80px 5%;">
+  <p style="font-size:0.7rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); margin-bottom:0.8rem; text-align:center;">Projector Mode</p>
+  <h2 style="font-family:'Playfair Display',serif; color:white; font-size:clamp(1.6rem,4vw,2.4rem); text-align:center; margin-bottom:0.5rem;">Bible Verse & Sermon Display</h2>
+  <p style="color:rgba(255,255,255,0.4); font-size:0.85rem; text-align:center; margin-bottom:2.5rem;">Type a verse or sermon text below. Click Fullscreen for projector view.</p>
+
+  <!-- Controls -->
+  <div style="width:100%; max-width:700px; background:#1a1a1a; border-radius:6px; padding:1.5rem; margin-bottom:1.5rem;">
+    <div style="display:flex; gap:0.8rem; margin-bottom:1rem; flex-wrap:wrap;">
+      <input id="verseRef" type="text" placeholder="Reference · e.g. John 3:16"
+        style="flex:1; min-width:160px; background:#2a2a2a; border:1px solid #333; border-radius:3px; padding:0.7rem 1rem; color:white; font-family:'Inter',sans-serif; font-size:0.9rem; outline:none;" />
+      <select id="fontSizeSelect" style="background:#2a2a2a; border:1px solid #333; border-radius:3px; padding:0.7rem 1rem; color:white; font-family:'Inter',sans-serif; font-size:0.85rem; outline:none;">
+        <option value="2rem">Small</option>
+        <option value="3rem" selected>Medium</option>
+        <option value="4.5rem">Large</option>
+        <option value="6rem">X-Large</option>
+      </select>
+    </div>
+    <textarea id="verseText" rows="4" placeholder="Type or paste the Bible verse or sermon text here…"
+      style="width:100%; background:#2a2a2a; border:1px solid #333; border-radius:3px; padding:0.8rem 1rem; color:white; font-family:'Inter',sans-serif; font-size:0.9rem; resize:vertical; outline:none; line-height:1.6;"></textarea>
+    <div style="display:flex; gap:0.8rem; margin-top:1rem; flex-wrap:wrap;">
+      <button onclick="updateDisplay()" style="flex:1; background:var(--green-mid); color:white; border:none; border-radius:3px; padding:0.75rem; font-size:0.9rem; font-weight:600; cursor:pointer;">Show on Display ↓</button>
+      <button onclick="openFullscreen()" style="flex:1; background:var(--gold); color:white; border:none; border-radius:3px; padding:0.75rem; font-size:0.9rem; font-weight:600; cursor:pointer;">⛶ Fullscreen</button>
+      <button onclick="clearDisplay()" style="background:#2a2a2a; color:rgba(255,255,255,0.5); border:1px solid #333; border-radius:3px; padding:0.75rem 1rem; font-size:0.85rem; cursor:pointer;">Clear</button>
+    </div>
+  </div>
+
+  <!-- Display Screen -->
+  <div id="verseDisplay" style="width:100%; max-width:900px; min-height:320px; background:#111; border:1px solid #222; border-radius:6px; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem 2.5rem; text-align:center; position:relative;">
+    <div style="position:absolute; top:0.8rem; left:1rem; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#333;">DISPLAY PREVIEW</div>
+    <p id="displayRef" style="font-size:0.9rem; font-weight:600; letter-spacing:0.1em; color:var(--gold-light); margin-bottom:1rem; text-transform:uppercase;"></p>
+    <p id="displayText" style="font-family:'Playfair Display',serif; font-size:3rem; color:white; line-height:1.4; max-width:800px;">
+      "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you."
+    </p>
+    <p id="displayRef2" style="font-size:0.85rem; color:rgba(255,255,255,0.4); margin-top:1.5rem;">Jeremiah 29:11</p>
+  </div>
+</section>
+
+<script>
+  function updateDisplay() {
+    const ref = document.getElementById('verseRef').value;
+    const text = document.getElementById('verseText').value;
+    const size = document.getElementById('fontSizeSelect').value;
+    if (text.trim()) {
+      document.getElementById('displayText').textContent = text;
+      document.getElementById('displayText').style.fontSize = size;
+      document.getElementById('displayRef').textContent = ref || '';
+      document.getElementById('displayRef2').textContent = ref || '';
+    }
+  }
+  function clearDisplay() {
+    document.getElementById('verseText').value = '';
+    document.getElementById('verseRef').value = '';
+    document.getElementById('displayText').textContent = '';
+    document.getElementById('displayRef').textContent = '';
+    document.getElementById('displayRef2').textContent = '';
+  }
+  function openFullscreen() {
+    const ref = document.getElementById('verseRef').value;
+    const text = document.getElementById('verseText').value || document.getElementById('displayText').textContent;
+    const size = document.getElementById('fontSizeSelect').value;
+    const win = window.open('', '_blank');
+    win.document.write(`<!DOCTYPE html><html><head><style>
+      *{margin:0;padding:0;box-sizing:border-box;}
+      body{background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:5vw;text-align:center;font-family:'Georgia',serif;}
+      .ref{font-size:1.2rem;letter-spacing:0.15em;text-transform:uppercase;color:#C8973A;margin-bottom:1.5rem;font-family:sans-serif;}
+      .verse{font-size:${size};color:#fff;line-height:1.4;max-width:1200px;}
+      .ref2{font-size:1rem;color:rgba(255,255,255,0.4);margin-top:2rem;font-family:sans-serif;}
+      .close-btn{position:fixed;top:1rem;right:1rem;background:rgba(255,255,255,0.1);color:white;border:none;padding:0.5rem 1rem;border-radius:3px;cursor:pointer;font-size:0.85rem;}
+    </style></head><body>
+      <button class="close-btn" onclick="window.close()">✕ Close</button>
+      <p class="ref">${ref || ''}</p>
+      <p class="verse">${text}</p>
+      <p class="ref2">${ref || ''}</p>
+    </body></html>`);
+  }
+</script>
+
+<!-- ══════════════════════════════════════════
+     WHO WE ARE / MISSION / VISION
+══════════════════════════════════════════ -->
+<section id="who-we-are" style="background:var(--white); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">Our Identity</p>
+    <h2 class="section-title" id="mission">Who We Are & Our Mission</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3rem;">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.4rem; margin-bottom:1rem;">Who We Are</h3>
+        <p style="color:var(--muted); line-height:1.8; margin-bottom:1.2rem;">Mountain View Seventh-day Adventist Church in Kantafu is a warm, Spirit-led congregation rooted in the Word of God. We are part of the global Seventh-day Adventist Church — a worldwide family of over 22 million believers in more than 215 countries.</p>
+        <p style="color:var(--muted); line-height:1.8;">We believe in whole-person ministry — nurturing the body, mind, and spirit. Our doors are open to everyone, regardless of background, because we believe every person bears the image of God.</p>
+        <div style="margin-top:2rem; padding:1.5rem; background:var(--cream); border-left:4px solid var(--gold); border-radius:2px;">
+          <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--green-deep); font-style:italic;">"A place where everyone belongs — built on the mountain, called to the community."</p>
+        </div>
+      </div>
+      <div>
+        <div style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid)); border-radius:6px; padding:2.5rem; margin-bottom:1.5rem;">
+          <p style="font-size:0.7rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-light); margin-bottom:0.5rem;">Our Mission</p>
+          <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.3rem; margin-bottom:0.8rem;">Making Disciples of All Nations</h3>
+          <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.75;">To proclaim the everlasting Gospel of Jesus Christ, prepare a people for His soon return, and serve our community with compassion, integrity, and hope — body, mind and soul.</p>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--gold),#b8822a); border-radius:6px; padding:2.5rem;">
+          <p style="font-size:0.7rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.8); margin-bottom:0.5rem;">Our Vision</p>
+          <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.3rem; margin-bottom:0.8rem;">A Transformed Kantafu</h3>
+          <p style="color:rgba(255,255,255,0.85); font-size:0.9rem; line-height:1.75;">A community transformed by the love of God — where every family knows Christ, every person is healthy and whole, and the name of Jesus is lifted high across Kantafu and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     OUR HISTORY
+══════════════════════════════════════════ -->
+<section id="history" style="background:var(--green-deep); padding:90px 5%;">
+  <div style="max-width:900px; margin:0 auto;">
+    <p class="section-label" style="color:var(--gold-light);">Roots & Heritage</p>
+    <h2 class="section-title" style="color:white;">How the SDA Church Began</h2>
+    <div style="margin-top:3rem; display:flex; flex-direction:column; gap:0;">
+      <!-- Timeline items -->
+      <div class="hist-item">
+        <div class="hist-dot"></div>
+        <div class="hist-year">1844</div>
+        <div class="hist-text"><strong>The Great Disappointment</strong> — On October 22, 1844, thousands of Millerite Adventists expected Christ's return. When He did not come as expected, most gave up. A small group searched the Scriptures more carefully and discovered a new understanding of the heavenly sanctuary (Daniel 8:14).</div>
+      </div>
+      <div class="hist-item">
+        <div class="hist-dot"></div>
+        <div class="hist-year">1844–50</div>
+        <div class="hist-text"><strong>Bible Study & Revelation</strong> — A small band of believers including James White, Ellen G. White, and Joseph Bates studied the Bible intensely. They recovered the seventh-day Sabbath truth, the state of the dead, and other foundational doctrines.</div>
+      </div>
+      <div class="hist-item">
+        <div class="hist-dot"></div>
+        <div class="hist-year">1863</div>
+        <div class="hist-text"><strong>Formal Organization</strong> — The General Conference of Seventh-day Adventists was officially organized on May 21, 1863, in Battle Creek, Michigan, with approximately 3,500 members and 125 churches. God's remnant church had taken shape.</div>
+      </div>
+      <div class="hist-item">
+        <div class="hist-dot"></div>
+        <div class="hist-year">1870s–1900s</div>
+        <div class="hist-text"><strong>Global Expansion</strong> — Missionaries were sent around the world. Schools, hospitals, and publishing houses were established on every continent. The church grew rapidly in Africa, Asia, Latin America and the Pacific.</div>
+      </div>
+      <div class="hist-item">
+        <div class="hist-dot"></div>
+        <div class="hist-year">Early 1900s</div>
+        <div class="hist-text"><strong>SDA in Kenya</strong> — Adventist missionaries arrived in East Africa, planting churches and schools across Kenya. The church became one of the largest Christian denominations in the country, with strong presence in education and health.</div>
+      </div>
+      <div class="hist-item">
+        <div class="hist-dot"></div>
+        <div class="hist-year">Today</div>
+        <div class="hist-text"><strong>Mountain View SDA, Kantafu</strong> — Our local congregation grew out of the faithfulness of early Adventist pioneers in this region. Today we carry that same mission — preaching the everlasting Gospel and preparing a people for Christ's return.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHAT WE BELIEVE
+══════════════════════════════════════════ -->
+<section id="what-we-believe" style="background:var(--cream); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">Doctrine & Truth</p>
+    <h2 class="section-title" id="fundamental">What We Believe — 28 Fundamental Beliefs</h2>
+    <p style="color:var(--muted); max-width:620px; line-height:1.75; margin-bottom:3rem;">The Seventh-day Adventist Church holds 28 Fundamental Beliefs, each grounded in Scripture. Here are the key pillars of our faith:</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.2rem;">
+      <div class="belief-card"><div class="belief-num">01</div><div><strong>The Holy Scriptures</strong><p>The Bible is the inspired Word of God — our supreme authority in all matters of faith and practice. (2 Tim. 3:16)</p></div></div>
+      <div class="belief-card"><div class="belief-num">02</div><div><strong>The Trinity</strong><p>One God: Father, Son, and Holy Spirit — a unity of three co-eternal Persons. (Matt. 28:19)</p></div></div>
+      <div class="belief-card"><div class="belief-num">03</div><div><strong>God the Father</strong><p>An eternal, personal God of love, justice, mercy and grace — Creator and Sustainer of all. (Gen. 1:1)</p></div></div>
+      <div class="belief-card"><div class="belief-num">04</div><div><strong>God the Son</strong><p>Jesus Christ is truly God and truly human — our Saviour, Lord, and coming King. (John 1:1, 14)</p></div></div>
+      <div class="belief-card"><div class="belief-num">05</div><div><strong>God the Holy Spirit</strong><p>The Spirit convicts, transforms, and empowers believers and the church. (Acts 1:8)</p></div></div>
+      <div class="belief-card"><div class="belief-num">06</div><div><strong>Creation</strong><p>God created the world in six literal days and rested on the seventh. Life is a gift from the Creator. (Gen. 1–2)</p></div></div>
+      <div class="belief-card"><div class="belief-num">07</div><div><strong>The Nature of Humanity</strong><p>Humans were created in God's image — body, mind, and spirit as an inseparable whole. (Gen. 1:26–27)</p></div></div>
+      <div class="belief-card"><div class="belief-num">08</div><div><strong>The Great Controversy</strong><p>A cosmic conflict between Christ and Satan underlies all of human history. We live in its final chapter. (Rev. 12)</p></div></div>
+      <div class="belief-card"><div class="belief-num">09</div><div><strong>The Life, Death & Resurrection of Christ</strong><p>Christ's perfect life, atoning death, and bodily resurrection are the foundation of our salvation. (1 Cor. 15:3–4)</p></div></div>
+      <div class="belief-card"><div class="belief-num">10</div><div><strong>The Sabbath</strong><p>The seventh day (Saturday) Sabbath is God's eternal sign of rest, creation, and redemption. (Ex. 20:8–11)</p></div></div>
+      <div class="belief-card"><div class="belief-num">11</div><div><strong>Baptism</strong><p>Baptism by immersion is a public declaration of death to sin and new life in Christ. (Rom. 6:1–6)</p></div></div>
+      <div class="belief-card"><div class="belief-num">12</div><div><strong>The Second Coming</strong><p>Christ will return literally, visibly, and gloriously. This is our blessed hope. (Acts 1:11; Rev. 1:7)</p></div></div>
+    </div>
+    <div style="margin-top:2rem; text-align:center;">
+      <a href="https://www.adventist.org/beliefs/" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-block; margin-top:1rem;">View All 28 Beliefs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SALVATION OF CHRIST
+══════════════════════════════════════════ -->
+<section id="salvation" style="background:var(--white); padding:90px 5%;">
+  <div style="max-width:900px; margin:0 auto; text-align:center;">
+    <p class="section-label" style="text-align:center;">The Good News</p>
+    <h2 class="section-title" style="margin:0 auto 1.5rem; text-align:center; max-width:600px;">Salvation Through Jesus Christ</h2>
+    <p style="color:var(--muted); line-height:1.8; margin-bottom:3rem; max-width:680px; margin-left:auto; margin-right:auto;">Salvation is not earned — it is a free gift of God's grace, received through faith in Jesus Christ. Here is what the Bible teaches about how we are saved:</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; text-align:left; margin-bottom:3rem;">
+      <div style="background:var(--cream); border-radius:6px; padding:2rem; border-top:4px solid var(--gold);">
+        <div style="font-size:2rem; margin-bottom:0.8rem;">✝️</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.1rem; margin-bottom:0.6rem;">We Are All Sinners</h3>
+        <p style="color:var(--muted); font-size:0.9rem; line-height:1.7;">"For all have sinned and fall short of the glory of God." — Romans 3:23. Sin separates us from God, and the consequence of sin is death (Romans 6:23).</p>
+      </div>
+      <div style="background:var(--cream); border-radius:6px; padding:2rem; border-top:4px solid var(--green-mid);">
+        <div style="font-size:2rem; margin-bottom:0.8rem;">❤️</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.1rem; margin-bottom:0.6rem;">God's Gift of Love</h3>
+        <p style="color:var(--muted); font-size:0.9rem; line-height:1.7;">"For God so loved the world that He gave His only Son, that whoever believes in Him shall not perish but have eternal life." — John 3:16.</p>
+      </div>
+      <div style="background:var(--cream); border-radius:6px; padding:2rem; border-top:4px solid var(--gold);">
+        <div style="font-size:2rem; margin-bottom:0.8rem;">🙏</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.1rem; margin-bottom:0.6rem;">Saved By Grace Through Faith</h3>
+        <p style="color:var(--muted); font-size:0.9rem; line-height:1.7;">"For it is by grace you have been saved, through faith — and this not from yourselves, it is the gift of God." — Ephesians 2:8.</p>
+      </div>
+      <div style="background:var(--cream); border-radius:6px; padding:2rem; border-top:4px solid var(--green-mid);">
+        <div style="font-size:2rem; margin-bottom:0.8rem;">🌟</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.1rem; margin-bottom:0.6rem;">New Life in Christ</h3>
+        <p style="color:var(--muted); font-size:0.9rem; line-height:1.7;">"Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!" — 2 Corinthians 5:17.</p>
+      </div>
+    </div>
+    <div style="background:var(--green-deep); border-radius:6px; padding:2.5rem; max-width:600px; margin:0 auto;">
+      <h3 style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.3rem; margin-bottom:1rem;">Want to Accept Jesus Today?</h3>
+      <p style="color:rgba(255,255,255,0.8); font-size:0.95rem; line-height:1.75; margin-bottom:1.5rem;">Salvation begins with a simple, sincere prayer of faith. Confess your sins, believe in Jesus, and surrender your life to Him. Then connect with our church family to begin your journey.</p>
+      <a href="#contact" class="btn btn-gold">Talk to a Pastor →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHAT IS THE SOUL
+══════════════════════════════════════════ -->
+<section id="soul" style="background:var(--green-deep); padding:90px 5%;">
+  <div style="max-width:900px; margin:0 auto;">
+    <p class="section-label" style="color:var(--gold-light);">Biblical Truth</p>
+    <h2 class="section-title" style="color:white;">What Is the Soul According to the Bible?</h2>
+    <p style="color:rgba(255,255,255,0.7); line-height:1.8; max-width:650px; margin-bottom:3rem;">Many people believe the soul is immortal and lives on after death. But what does the Bible actually say? This is one of the most important — and most misunderstood — doctrines in Christianity.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:3rem;">
+      <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:2rem;">
+        <h3 style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.1rem; margin-bottom:1rem;">📖 What the Bible Says</h3>
+        <ul style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.9; list-style:none; padding:0;">
+          <li>• <strong style="color:white;">Genesis 2:7</strong> — "God formed man from the dust and breathed into his nostrils the breath of life, and man <em>became</em> a living soul." (A soul is not something you have — it is what you ARE.)</li>
+          <li style="margin-top:0.8rem;">• <strong style="color:white;">Ezekiel 18:4</strong> — "The soul that sins, it shall die." Souls are mortal.</li>
+          <li style="margin-top:0.8rem;">• <strong style="color:white;">Ecclesiastes 9:5</strong> — "The dead know nothing." Death is like sleep, not conscious existence.</li>
+          <li style="margin-top:0.8rem;">• <strong style="color:white;">John 11:11–14</strong> — Jesus described the dead Lazarus as "sleeping," then raised him at the resurrection.</li>
+          <li style="margin-top:0.8rem;">• <strong style="color:white;">1 Thessalonians 4:16</strong> — The dead are raised at Christ's Second Coming — not immediately at death.</li>
+        </ul>
+      </div>
+      <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:2rem;">
+        <h3 style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.1rem; margin-bottom:1rem;">✅ What SDAs Believe</h3>
+        <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.8;">Seventh-day Adventists believe in <strong style="color:white;">conditional immortality</strong> — also called "soul sleep." Human beings are mortal. At death, the person is unconscious, waiting for the resurrection. Immortality is not something we naturally possess — it is a gift given at the Second Coming of Christ to those who have accepted Him as Saviour.</p>
+        <div style="margin-top:1.5rem; padding:1rem; background:rgba(200,151,58,0.15); border-left:3px solid var(--gold); border-radius:2px;">
+          <p style="color:var(--gold-light); font-size:0.88rem; font-style:italic;">"The living know that they will die, but the dead know nothing." — Ecclesiastes 9:5</p>
+        </div>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.82rem; margin-top:1rem;">This truth protects against false teachings like communicating with the dead (spiritualism) and purgatory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     10 COMMANDMENTS
+══════════════════════════════════════════ -->
+<section id="commandments" style="background:var(--cream); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">God's Law</p>
+    <h2 class="section-title">The Ten Commandments</h2>
+    <p style="color:var(--muted); max-width:600px; line-height:1.75; margin-bottom:3rem;">Found in Exodus 20:1–17, the Ten Commandments are God's eternal moral law — a transcript of His character, and a guide for holy living. SDAs uphold all ten, including the fourth — the seventh-day Sabbath.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.2rem;">
+      <div class="cmd-card"><div class="cmd-num">I</div><div><strong>No Other Gods</strong><p>"You shall have no other gods before Me." — We worship only the Creator God.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">II</div><div><strong>No Idols</strong><p>"You shall not make for yourself an idol." — We worship God in spirit and truth, not through images.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">III</div><div><strong>God's Name</strong><p>"You shall not misuse the name of the LORD your God." — We honour God's name in word and deed.</p></div></div>
+      <div class="cmd-card cmd-card-sabbath"><div class="cmd-num">IV</div><div><strong>Remember the Sabbath</strong><p>"Remember the Sabbath day by keeping it holy. Six days you shall labour… but the seventh day is a Sabbath to the LORD." — Saturday is God's holy rest day.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">V</div><div><strong>Honour Parents</strong><p>"Honour your father and your mother." — Strong families are the foundation of strong communities.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">VI</div><div><strong>Do Not Murder</strong><p>"You shall not murder." — Human life is sacred, made in God's image.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">VII</div><div><strong>Be Faithful</strong><p>"You shall not commit adultery." — Marriage is a sacred covenant between one man and one woman.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">VIII</div><div><strong>Do Not Steal</strong><p>"You shall not steal." — Respect others' property and work with honesty and integrity.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">IX</div><div><strong>Do Not Lie</strong><p>"You shall not give false testimony." — Speak truth in all things; be trustworthy.</p></div></div>
+      <div class="cmd-card"><div class="cmd-num">X</div><div><strong>Do Not Covet</strong><p>"You shall not covet." — Be content with what God has given you; avoid jealousy and greed.</p></div></div>
+    </div>
+    <div style="margin-top:2.5rem; padding:2rem; background:var(--green-deep); border-radius:6px; text-align:center; max-width:700px; margin-left:auto; margin-right:auto;">
+      <p style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.05rem; font-style:italic;">"If you love Me, keep My commandments." — Jesus Christ (John 14:15)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DO'S & DON'TS
+══════════════════════════════════════════ -->
+<section id="dos-donts" style="background:var(--white); padding:90px 5%;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <p class="section-label">SDA Lifestyle</p>
+    <h2 class="section-title">Do's & Don'ts of the SDA Faith</h2>
+    <p style="color:var(--muted); line-height:1.75; max-width:600px; margin-bottom:3rem;">SDA lifestyle guidelines are not about earning salvation — they flow from gratitude to God and a desire to honour Him with our whole being. "Whether you eat or drink, do it all to the glory of God." — 1 Cor. 10:31</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem;">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-mid); font-size:1.2rem; margin-bottom:1.5rem;">✅ Do's</h3>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.8rem;">
+          <li class="do-item">🙏 Worship God on the seventh-day Sabbath (Saturday)</li>
+          <li class="do-item">📖 Study the Bible daily and pray without ceasing</li>
+          <li class="do-item">🥦 Follow a healthy plant-based diet (Daniel 1)</li>
+          <li class="do-item">💧 Drink plenty of water; follow the 8 health laws</li>
+          <li class="do-item">🤝 Serve your community and care for the needy</li>
+          <li class="do-item">💰 Return faithful tithe and offerings to God</li>
+          <li class="do-item">👗 Dress modestly and with dignity</li>
+          <li class="do-item">🏥 Practise preventive health — exercise, rest, sunshine</li>
+          <li class="do-item">👨‍👩‍👧 Honour marriage as a sacred covenant</li>
+          <li class="do-item">🌱 Care for God's creation and the environment</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:'Playfair Display',serif; color:#c0392b; font-size:1.2rem; margin-bottom:1.5rem;">❌ Don'ts</h3>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.8rem;">
+          <li class="dont-item">🚬 Avoid tobacco in any form (1 Cor. 6:19–20)</li>
+          <li class="dont-item">🍺 Abstain from alcohol and harmful substances</li>
+          <li class="dont-item">🥩 Avoid unclean meats as defined in Leviticus 11</li>
+          <li class="dont-item">🎰 Avoid gambling and games of chance</li>
+          <li class="dont-item">📺 Avoid entertainment that glorifies sin and violence</li>
+          <li class="dont-item">💔 Avoid sexual immorality — keep intimacy within marriage</li>
+          <li class="dont-item">🤥 Avoid dishonesty, gossip, and false witness</li>
+          <li class="dont-item">🛒 Avoid secular commerce on the Sabbath</li>
+          <li class="dont-item">💊 Avoid addictive drugs and substances</li>
+          <li class="dont-item">⚔️ Avoid participation in warfare that takes human life</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ELLEN G. WHITE
+══════════════════════════════════════════ -->
+<section id="ellen-white" style="background:var(--cream); padding:90px 5%;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <p class="section-label">The Spirit of Prophecy</p>
+    <h2 class="section-title">Ellen G. White & Her Teachings</h2>
+    <div style="display:grid; grid-template-columns:1fr 2fr; gap:4rem; margin-top:2.5rem; align-items:start;">
+      <div style="background:linear-gradient(135deg,var(--green-deep),var(--green-mid)); border-radius:6px; padding:2.5rem; text-align:center; color:white;">
+        <div style="font-size:4rem; margin-bottom:1rem;">✍️</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--gold-light); margin-bottom:0.5rem;">Ellen G. White</h3>
+        <p style="font-size:0.82rem; color:rgba(255,255,255,0.7); margin-bottom:0.3rem;">1827 – 1915</p>
+        <p style="font-size:0.88rem; color:rgba(255,255,255,0.8); line-height:1.7;">Co-founder of the Seventh-day Adventist Church and one of the most translated female authors in history. Her writings are regarded as inspired counsel for the church.</p>
+      </div>
+      <div>
+        <p style="color:var(--muted); line-height:1.8; margin-bottom:2rem;">Ellen White received prophetic visions from a young age. Adventists believe her writings are a gift of the Holy Spirit — not equal to Scripture, but a "lesser light" pointing to the "greater light" of the Bible.</p>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div style="background:white; border-radius:4px; padding:1.5rem; border-left:4px solid var(--gold);">
+            <strong style="color:var(--green-deep);">📚 Health Reform</strong><p style="color:var(--muted); font-size:0.9rem; margin-top:0.3rem;">Ellen White wrote extensively on diet, lifestyle, and the connection between physical and spiritual health — decades before modern science confirmed many of her insights. Her book <em>The Ministry of Healing</em> remains a SDA classic.</p>
+          </div>
+          <div style="background:white; border-radius:4px; padding:1.5rem; border-left:4px solid var(--green-mid);">
+            <strong style="color:var(--green-deep);">📖 Education</strong><p style="color:var(--muted); font-size:0.9rem; margin-top:0.3rem;">She championed wholistic Christian education — training the hands, heart, and head. Her book <em>Education</em> shaped hundreds of Adventist schools worldwide.</p>
+          </div>
+          <div style="background:white; border-radius:4px; padding:1.5rem; border-left:4px solid var(--gold);">
+            <strong style="color:var(--green-deep);">🌍 The Great Controversy</strong><p style="color:var(--muted); font-size:0.9rem; margin-top:0.3rem;">Her masterwork <em>The Great Controversy</em> traces the conflict between Christ and Satan from ancient Israel to Christ's Second Coming — and is widely considered one of the most powerful Christian books ever written.</p>
+          </div>
+          <div style="background:white; border-radius:4px; padding:1.5rem; border-left:4px solid var(--green-mid);">
+            <strong style="color:var(--green-deep);">✝️ Steps to Christ</strong><p style="color:var(--muted); font-size:0.9rem; margin-top:0.3rem;">Her devotional classic <em>Steps to Christ</em> has been translated into more than 165 languages and has led millions to a personal relationship with Jesus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     RELIGIOUS LIBERTY
+══════════════════════════════════════════ -->
+<section id="religious-liberty" style="background:var(--green-deep); padding:90px 5%;">
+  <div style="max-width:900px; margin:0 auto; text-align:center;">
+    <p class="section-label" style="color:var(--gold-light); text-align:center;">Freedom of Conscience</p>
+    <h2 class="section-title" style="color:white; margin:0 auto 1.5rem; max-width:700px; text-align:center;">Religious Liberty</h2>
+    <p style="color:rgba(255,255,255,0.75); line-height:1.8; max-width:680px; margin:0 auto 3rem;">Seventh-day Adventists are passionate advocates for freedom of religion and conscience. This is not just a political position — it is rooted in the Bible and in the example of Jesus, who never compelled faith.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.5rem; text-align:left; margin-bottom:3rem;">
+      <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:2rem;">
+        <div style="font-size:1.8rem; margin-bottom:0.8rem;">⚖️</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.05rem; margin-bottom:0.6rem;">Freedom to Worship</h3>
+        <p style="color:rgba(255,255,255,0.7); font-size:0.88rem; line-height:1.7;">Every human being has the God-given right to worship according to the dictates of their own conscience. No government or institution should compel religious observance.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:2rem;">
+        <div style="font-size:1.8rem; margin-bottom:0.8rem;">🕊️</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.05rem; margin-bottom:0.6rem;">Church & State</h3>
+        <p style="color:rgba(255,255,255,0.7); font-size:0.88rem; line-height:1.7;">SDAs uphold the separation of church and state. History shows that when governments enforce religious laws, persecution follows. We defend this separation as a protection for all.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:2rem;">
+        <div style="font-size:1.8rem; margin-bottom:0.8rem;">📰</div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1.05rem; margin-bottom:0.6rem;">Liberty Magazine</h3>
+        <p style="color:rgba(255,255,255,0.7); font-size:0.88rem; line-height:1.7;">The SDA Church publishes <em>Liberty Magazine</em> — one of the oldest religious liberty journals in the world — advocating for freedom of conscience for people of all faiths.</p>
+      </div>
+    </div>
+    <div style="padding:2rem; background:rgba(200,151,58,0.15); border:1px solid rgba(200,151,58,0.3); border-radius:6px; max-width:600px; margin:0 auto;">
+      <p style="font-family:'Playfair Display',serif; color:var(--gold-light); font-size:1rem; font-style:italic;">"Render to Caesar what is Caesar's, and to God what is God's." — Jesus (Mark 12:17)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAMOUS SDA MEMBERS
+══════════════════════════════════════════ -->
+<section id="famous-members" style="background:var(--white); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">Adventists in the World</p>
+    <h2 class="section-title">Famous Seventh-day Adventists</h2>
+    <p style="color:var(--muted); max-width:600px; line-height:1.75; margin-bottom:3rem;">The SDA Church has produced world-class leaders in medicine, public health, education, music, politics, and more. Their faith shaped their contribution to the world.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;">
+      <div class="famous-card"><div class="famous-icon">🏥</div><div><strong>Dr. Ben Carson</strong><p>World-renowned neurosurgeon and former US Secretary of Housing. Known for separating conjoined twins. A devout Adventist whose faith shaped his calling to medicine.</p></div></div>
+      <div class="famous-card"><div class="famous-icon">🎵</div><div><strong>Little Richard</strong><p>Rock and roll pioneer who later returned to his Adventist faith and gospel music roots, reflecting on the spiritual foundation of his life.</p></div></div>
+      <div class="famous-card"><div class="famous-icon">⚕️</div><div><strong>Dr. John Harvey Kellogg</strong><p>Medical doctor and inventor of corn flakes — a product born from his Adventist health principles at the Battle Creek Sanitarium.</p></div></div>
+      <div class="famous-card"><div class="famous-icon">✈️</div><div><strong>Desmond Doss</strong><p>WWII conscientious objector and Medal of Honor recipient who saved 75 soldiers without carrying a weapon. His story was told in the film <em>Hacksaw Ridge</em>.</p></div></div>
+      <div class="famous-card"><div class="famous-icon">🎙️</div><div><strong>Wintley Phipps</strong><p>Grammy-nominated gospel artist, pastor, and founder of the US Dream Academy — known for his powerful gospel performances before world leaders.</p></div></div>
+      <div class="famous-card"><div class="famous-icon">🔬</div><div><strong>Dr. T. Colin Campbell</strong><p>Nutritional biochemist and author of <em>The China Study</em> — whose landmark research on plant-based diets reflects Adventist health principles.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHAT SCHOLARS SAY
+══════════════════════════════════════════ -->
+<section id="scholars" style="background:var(--cream); padding:90px 5%;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <p class="section-label">Academic Perspective</p>
+    <h2 class="section-title">What Scholars Say About the SDA Church</h2>
+    <div style="display:flex; flex-direction:column; gap:2rem; margin-top:3rem;">
+      <div class="scholar-card">
+        <div class="scholar-quote">"The Seventh-day Adventist Church is one of the most ethnically diverse Protestant denominations in the world, with significant presence in Africa, Latin America, and Asia — making it a truly global faith community."</div>
+        <div class="scholar-source">— Pew Research Center, Global Christianity Report</div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-quote">"Adventist health research has consistently shown that members who follow the church's plant-based dietary guidelines live significantly longer and with lower rates of chronic disease than the general population."</div>
+        <div class="scholar-source">— Loma Linda University Adventist Health Studies, published in JAMA & National Geographic Blue Zones research</div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-quote">"The SDA Church operates one of the largest Protestant educational systems in the world, with over 8,000 schools, colleges, and universities on six continents — a remarkable achievement in Christian education."</div>
+        <div class="scholar-source">— World Council of Churches Educational Review</div>
+      </div>
+      <div class="scholar-card">
+        <div class="scholar-quote">"Ellen White's writings on health reform, education, and social justice were remarkably ahead of their time. Her holistic vision of human development continues to influence Adventist institutions worldwide."</div>
+        <div class="scholar-source">— Dr. George Knight, Professor Emeritus of Church History, Andrews University</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PATHFINDERS & ADVENTURERS
+══════════════════════════════════════════ -->
+<section id="youth" style="background:var(--green-deep); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label" style="color:var(--gold-light);">Youth Ministry</p>
+    <h2 class="section-title" style="color:white;">Pathfinders, Adventurers & Youth</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem; margin-top:3rem;">
+      <!-- Adventurers -->
+      <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; overflow:hidden;">
+        <div style="background:var(--gold); padding:1.5rem; text-align:center;">
+          <div style="font-size:2.5rem;">⭐</div>
+          <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.3rem; margin-top:0.5rem;">Adventurers</h3>
+          <p style="color:rgba(255,255,255,0.85); font-size:0.82rem;">Ages 4–9</p>
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.8; margin-bottom:1rem;">The Adventurer Club nurtures young children in faith, character, and practical skills. Activities include crafts, nature study, Bible memory, and community service.</p>
+          <p style="color:var(--gold-light); font-size:0.82rem; font-weight:600;">🎯 Aim: "Jesus Loves Me"</p>
+          <p style="color:var(--gold-light); font-size:0.82rem; font-weight:600; margin-top:0.3rem;">📣 Motto: "I will do my best"</p>
+          <div style="margin-top:1rem; padding:1rem; background:rgba(255,255,255,0.05); border-radius:4px;">
+            <p style="color:rgba(255,255,255,0.6); font-size:0.8rem;"><strong style="color:white;">Uniform:</strong> Blue shirt with gold kerchief, navy trousers/skirt. The Adventurer shield badge is worn on the left chest.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Pathfinders -->
+      <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; overflow:hidden;">
+        <div style="background:var(--green-mid); padding:1.5rem; text-align:center;">
+          <div style="font-size:2.5rem;">🏕️</div>
+          <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.3rem; margin-top:0.5rem;">Pathfinders</h3>
+          <p style="color:rgba(255,255,255,0.85); font-size:0.82rem;">Ages 10–15</p>
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.8; margin-bottom:1rem;">The Pathfinder Club is the flagship SDA youth ministry — a worldwide movement developing Christian character, leadership, and life skills through camping, marching, honors, and service.</p>
+          <p style="color:var(--gold-light); font-size:0.82rem; font-weight:600;">🎯 Aim: "The Love of Christ Constraineth Us"</p>
+          <p style="color:var(--gold-light); font-size:0.82rem; font-weight:600; margin-top:0.3rem;">📣 Motto: "The Advent Message to All the World in My Generation"</p>
+          <p style="color:var(--gold-light); font-size:0.82rem; font-weight:600; margin-top:0.3rem;">🤝 Pledge: "By the grace of God, I will be pure and kind and true…"</p>
+          <div style="margin-top:1rem; padding:1rem; background:rgba(255,255,255,0.05); border-radius:4px;">
+            <p style="color:rgba(255,255,255,0.6); font-size:0.8rem;"><strong style="color:white;">Uniform:</strong> White shirt with red neckerchief, dark trousers/skirt. Class badges and honor patches are worn on the sash/vest.</p>
+            <p style="color:rgba(255,255,255,0.6); font-size:0.8rem; margin-top:0.5rem;"><strong style="color:white;">Flag:</strong> The Pathfinder flag features the blue and gold colours representing faithfulness and excellence, with the Pathfinder shield emblem.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Youth Ministry -->
+      <div style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); border-radius:6px; overflow:hidden;">
+        <div style="background:#1a4a6b; padding:1.5rem; text-align:center;">
+          <div style="font-size:2.5rem;">🔥</div>
+          <h3 style="font-family:'Playfair Display',serif; color:white; font-size:1.3rem; margin-top:0.5rem;">Senior Youth (AY)</h3>
+          <p style="color:rgba(255,255,255,0.85); font-size:0.82rem;">Ages 16–35</p>
+        </div>
+        <div style="padding:1.5rem;">
+          <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.8; margin-bottom:1rem;">Adventist Youth (AY) Society empowers young people to lead in the church and community through evangelism, fellowship, and service projects.</p>
+          <p style="color:var(--gold-light); font-size:0.82rem; font-weight:600;">🎯 Motto: "The Advent Message to All the World in This Generation"</p>
+          <div style="margin-top:1rem; padding:1rem; background:rgba(255,255,255,0.05); border-radius:4px;">
+            <p style="color:rgba(255,255,255,0.6); font-size:0.8rem;"><strong style="color:white;">Songs include:</strong> "Onward SDA Soldiers," "Dare to be a Daniel," "We Have This Hope," and Pathfinder & AY marching songs sung at camporees and rallies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DEPARTMENTS
+══════════════════════════════════════════ -->
+<section id="departments" style="background:var(--cream); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">Church Structure</p>
+    <h2 class="section-title">Departments & Stewardship</h2>
+    <p style="color:var(--muted); max-width:600px; line-height:1.75; margin-bottom:3rem;">Mountain View SDA Church operates through dedicated departments, each serving a vital role in the life of the congregation and community.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem;">
+      <div class="dept-card" id="women"><div class="dept-icon">👩‍👩‍👧</div><strong>Women's Ministry</strong><p>Empowering women through prayer, Bible study, mentorship, and community outreach. "Women Ministering to Women — and to the World."</p></div>
+      <div class="dept-card" id="men"><div class="dept-icon">👨‍👨‍👦</div><strong>Men's Ministry</strong><p>Building godly men through accountability, leadership training, family responsibility, and evangelism. Iron sharpening iron.</p></div>
+      <div class="dept-card"><div class="dept-icon">🎵</div><strong>Music Ministry</strong><p>Choirs, praise teams, and instrumentalists who lead the congregation in Spirit-filled worship every Sabbath.</p></div>
+      <div class="dept-card" id="community"><div class="dept-icon">🤝</div><strong>Community Services (ADRA)</strong><p>Partnering with ADRA Kenya to provide food, health, and social support to vulnerable families in Kantafu and surroundings.</p></div>
+      <div class="dept-card"><div class="dept-icon">📖</div><strong>Sabbath School</strong><p>Organized Bible study for all ages every Sabbath at 9:00 AM, using the official SDA Sabbath School Quarterly.</p></div>
+      <div class="dept-card"><div class="dept-icon">🏥</div><strong>Health Ministries</strong><p>Promoting the SDA 8 health principles — Nutrition, Exercise, Water, Sunlight, Temperance, Air, Rest, and Trust in God (NEWSTART).</p></div>
+      <div class="dept-card"><div class="dept-icon">📢</div><strong>Evangelism & Outreach</strong><p>Conducting evangelistic series, lay Bible workers, literature evangelism, and door-to-door ministry in the community.</p></div>
+      <div class="dept-card"><div class="dept-icon">💰</div><strong>Stewardship</strong><p>Teaching faithful management of time, talents, and finances — including tithe, offerings, and environmental stewardship.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SPIRITUAL HEALTH & MENTAL WELLNESS
+══════════════════════════════════════════ -->
+<section id="spiritual-health" style="background:var(--white); padding:90px 5%;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <p class="section-label">Wholeness</p>
+    <h2 class="section-title">Spiritual Health & Mental Wellness</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-top:3rem;">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.3rem; margin-bottom:1.2rem;" id="mental-health">🧠 Youth & Men's Mental Awareness</h3>
+        <p style="color:var(--muted); line-height:1.8; margin-bottom:1rem;">Mental health is not a weakness — it is a health issue. Mountain View SDA Church is committed to breaking the stigma of mental illness and supporting our members, especially our youth and men, with compassion and biblical truth.</p>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.8rem;">
+          <li class="health-item">🙏 <strong>Prayer and spiritual support</strong> — connecting struggling members with prayer partners and pastoral care</li>
+          <li class="health-item">👥 <strong>Support groups</strong> — safe spaces for men and youth to share struggles without judgement</li>
+          <li class="health-item">📚 <strong>Education</strong> — mental health awareness programmes, seminars, and resources</li>
+          <li class="health-item">🏥 <strong>Professional referrals</strong> — partnering with Christian counsellors and health professionals</li>
+        </ul>
+        <div style="margin-top:1.5rem; padding:1.2rem; background:var(--cream); border-radius:4px; border-left:4px solid var(--green-mid);">
+          <p style="color:var(--green-deep); font-size:0.88rem;"><strong>If you are struggling</strong>, please speak to our pastor or a church elder. You are not alone. God sees you. We see you.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.3rem; margin-bottom:1.2rem;">📖 Bible Study Resources</h3>
+        <p style="color:var(--muted); line-height:1.8; margin-bottom:1rem;">Growing in Christ requires regular time in God's Word. We offer:</p>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.8rem; margin-bottom:2rem;">
+          <li class="health-item">📚 Weekly Sabbath School Quarterly — systematic Bible study for all ages</li>
+          <li class="health-item">🌐 Online Bible study guides through the SDA Church website</li>
+          <li class="health-item">🤝 Personal Bible studies — request a free Bible study with one of our trained instructors</li>
+          <li class="health-item">📻 Adventist World Radio and Hope Channel Kenya — daily devotionals and sermons</li>
+        </ul>
+        <a href="#contact" style="display:inline-block; background:var(--green-mid); color:white; padding:0.8rem 1.8rem; border-radius:3px; text-decoration:none; font-weight:600; font-size:0.9rem;">Request a Free Bible Study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PRAYER REQUEST
+══════════════════════════════════════════ -->
+<section id="prayer" style="background:linear-gradient(135deg, var(--green-deep) 0%, #163324 100%); padding:90px 5%;">
+  <div style="max-width:700px; margin:0 auto; text-align:center;">
+    <p class="section-label" style="color:var(--gold-light); text-align:center;">Prayer & Intercession</p>
+    <h2 class="section-title" style="color:white; margin:0 auto 1rem; text-align:center; max-width:500px;">Submit a Prayer Request</h2>
+    <p style="color:rgba(255,255,255,0.7); line-height:1.8; margin-bottom:2.5rem;">"Call on Me and I will answer you." — Jeremiah 33:3. Our prayer team intercedes for every request submitted. Your request is kept confidential.</p>
+    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:6px; padding:2.5rem; text-align:left;">
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <input type="text" placeholder="Your Name (optional)" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3px; padding:0.8rem 1rem; color:white; font-family:'Inter',sans-serif; font-size:0.9rem; outline:none;" />
+        <select style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3px; padding:0.8rem 1rem; color:rgba(255,255,255,0.8); font-family:'Inter',sans-serif; font-size:0.9rem; outline:none;">
+          <option value="" style="background:#1A3D2B;">Type of Request</option>
+          <option value="healing" style="background:#1A3D2B;">Physical Healing</option>
+          <option value="family" style="background:#1A3D2B;">Family & Relationships</option>
+          <option value="financial" style="background:#1A3D2B;">Financial Breakthrough</option>
+          <option value="salvation" style="background:#1A3D2B;">Salvation for a Loved One</option>
+          <option value="spiritual" style="background:#1A3D2B;">Spiritual Growth</option>
+          <option value="other" style="background:#1A3D2B;">Other</option>
+        </select>
+        <textarea rows="5" placeholder="Share your prayer request here. Everything is kept in confidence by our prayer team…" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:3px; padding:0.8rem 1rem; color:white; font-family:'Inter',sans-serif; font-size:0.9rem; resize:vertical; outline:none; line-height:1.6;"></textarea>
+        <label style="display:flex; align-items:center; gap:0.7rem; color:rgba(255,255,255,0.7); font-size:0.85rem; cursor:pointer;">
+          <input type="checkbox" style="width:16px; height:16px; accent-color:var(--gold);" />
+          I would like a church elder to follow up with me personally
+        </label>
+        <button onclick="submitPrayer()" style="background:var(--gold); color:white; border:none; border-radius:3px; padding:0.9rem; font-size:0.95rem; font-weight:600; cursor:pointer; transition:background 0.2s;" onmouseover="this.style.background='#b8822a'" onmouseout="this.style.background='var(--gold)'">🙏 Submit Prayer Request</button>
+        <div id="prayerConfirm" style="display:none; background:rgba(74,158,111,0.2); border:1px solid var(--green-light); border-radius:4px; padding:1rem; text-align:center; color:var(--gold-light); font-size:0.9rem;">✅ Your prayer request has been received. Our team is already praying for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     NEWS & ANNOUNCEMENTS
+══════════════════════════════════════════ -->
+<section id="news" style="background:var(--cream); padding:90px 5%;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <p class="section-label">Stay Updated</p>
+    <h2 class="section-title">Recent News & Announcements</h2>
+    <div style="display:flex; flex-direction:column; gap:1.2rem; margin-top:2.5rem;">
+      <div class="news-card">
+        <div class="news-date">Jun 15, 2026</div>
+        <div class="news-badge news-badge-new">New</div>
+        <h3 class="news-title">Evangelistic Series — July 19th</h3>
+        <p class="news-body">Our annual evangelistic series begins July 19th at 7:00 PM. Invite your friends, family and neighbours. Theme: "Hope for Today, Certainty for Tomorrow." All are welcome!</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">Jun 10, 2026</div>
+        <div class="news-badge news-badge-event">Event</div>
+        <h3 class="news-title">Community Health Fair — July 5th</h3>
+        <p class="news-body">Free medical screenings, nutrition advice, and health consultations at the church grounds from 9 AM to 3 PM. Bring your family — this event is free for all.</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">Jun 5, 2026</div>
+        <div class="news-badge news-badge-youth">Youth</div>
+        <h3 class="news-title">Pathfinder Camporee Registration Open</h3>
+        <p class="news-body">Registration is now open for the East Kenya Conference Pathfinder Camporee. All Pathfinders aged 10–15 are encouraged to register. Contact the youth leader for forms.</p>
+      </div>
+      <div class="news-card">
+        <div class="news-date">May 28, 2026</div>
+        <div class="news-badge news-badge-church">Church</div>
+        <h3 class="news-title">New Prayer Meeting Schedule</h3>
+        <p class="news-body">Wednesday Prayer Meeting now begins at 6:30 PM (moved from 7:00 PM). Bible study focus this quarter: The Book of Daniel and End-Time Prophecy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIBLE Q&A - AI Powered -->
+<section id="bible-qa" style="background:var(--white); padding:90px 5%;">
+  <div style="max-width:800px; margin:0 auto; text-align:center;">
+    <p class="section-label" style="text-align:center;">AI-Powered</p>
+    <h2 class="section-title" style="margin:0 auto 1rem; text-align:center;">Ask a Bible Question</h2>
+    <p style="color:var(--muted); line-height:1.8; margin-bottom:2.5rem;">Have a question about the Bible, SDA beliefs, or Scripture? Ask below and get an answer grounded in the Word of God.</p>
+    <div style="background:var(--cream); border-radius:6px; padding:2rem; text-align:left;">
+      <div style="display:flex; gap:0.8rem; margin-bottom:1rem;">
+        <input id="bibleQuestion" type="text" placeholder="e.g. What does the Bible say about death? What is the Sabbath?" style="flex:1; border:1.5px solid var(--border); border-radius:3px; padding:0.8rem 1rem; font-family:'Inter',sans-serif; font-size:0.9rem; color:var(--charcoal); background:white; outline:none;" onkeydown="if(event.key==='Enter')askBible()" />
+        <button onclick="askBible()" style="background:var(--green-mid); color:white; border:none; border-radius:3px; padding:0.8rem 1.5rem; font-size:0.9rem; font-weight:600; cursor:pointer; white-space:nowrap;">Ask →</button>
+      </div>
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+        <button onclick="quickAsk('What does the Bible say about the Sabbath?')" class="qa-quick">Sabbath</button>
+        <button onclick="quickAsk('What happens when we die according to the Bible?')" class="qa-quick">Death & Soul</button>
+        <button onclick="quickAsk('How are we saved according to the Bible?')" class="qa-quick">Salvation</button>
+        <button onclick="quickAsk('What is the Second Coming of Christ?')" class="qa-quick">Second Coming</button>
+        <button onclick="quickAsk('What does the Bible say about prayer?')" class="qa-quick">Prayer</button>
+      </div>
+      <div id="bibleAnswer" style="display:none; background:white; border-radius:4px; padding:1.5rem; border-left:4px solid var(--green-mid); font-size:0.93rem; line-height:1.8; color:var(--charcoal);"></div>
+      <div id="bibleLoading" style="display:none; text-align:center; padding:2rem; color:var(--muted);">
+        <div style="display:inline-block; width:20px; height:20px; border:2px solid var(--border); border-top-color:var(--green-mid); border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:0.5rem;"></div>
+        <p style="font-size:0.85rem;">Searching the Scriptures…</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     ADDITIONAL STYLES FOR NEW SECTIONS
+══════════════════════════════════════════ -->
+<style>
+  /* Resource overlay cards */
+  .res-tag { background:rgba(200,151,58,0.15); border:1px solid rgba(200,151,58,0.3); border-radius:20px; padding:0.4rem 1rem; font-size:0.8rem; color:var(--gold-light); cursor:pointer; font-family:'Inter',sans-serif; transition:all 0.2s; }
+  .res-tag:hover { background:var(--gold); color:white; border-color:var(--gold); }
+
+  .res-card { border-radius:10px; overflow:hidden; cursor:pointer; position:relative; min-height:200px; display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s; }
+  .res-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,0.4); }
+  .res-card-bg { position:absolute; inset:0; z-index:0; }
+  .res-card-content { position:relative; z-index:1; padding:1.8rem; display:flex; flex-direction:column; height:100%; }
+  .res-icon { font-size:2.2rem; margin-bottom:0.8rem; }
+  .res-title { font-family:'Playfair Display',serif; color:white; font-size:1.1rem; margin-bottom:0.5rem; line-height:1.3; }
+  .res-desc { color:rgba(255,255,255,0.65); font-size:0.82rem; line-height:1.65; flex:1; }
+  .res-arrow { color:var(--gold-light); font-size:1.2rem; margin-top:1.2rem; font-weight:600; }
+  .res-card[style*="display:none"] { display:none !important; }
+  .hist-item { display:flex; gap:1.5rem; padding:1.5rem 0; border-bottom:1px solid rgba(255,255,255,0.1); position:relative; }
+  .hist-item:last-child { border-bottom:none; }
+  .hist-dot { width:12px; height:12px; background:var(--gold); border-radius:50%; margin-top:0.35rem; flex-shrink:0; }
+  .hist-year { font-size:0.75rem; font-weight:700; color:var(--gold-light); white-space:nowrap; min-width:60px; padding-top:0.15rem; }
+  .hist-text { color:rgba(255,255,255,0.75); font-size:0.9rem; line-height:1.75; }
+  .hist-text strong { color:white; }
+
+  /* Belief cards */
+  .belief-card { background:var(--white); border:1px solid var(--border); border-radius:4px; padding:1.5rem; display:flex; gap:1rem; transition:box-shadow 0.2s; }
+  .belief-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+  .belief-num { font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--gold); line-height:1; flex-shrink:0; min-width:36px; }
+  .belief-card strong { display:block; color:var(--green-deep); font-size:0.95rem; margin-bottom:0.3rem; }
+  .belief-card p { color:var(--muted); font-size:0.83rem; line-height:1.65; }
+
+  /* Commandment cards */
+  .cmd-card { background:var(--white); border:1px solid var(--border); border-radius:4px; padding:1.5rem; display:flex; gap:1rem; transition:all 0.2s; }
+  .cmd-card:hover { border-color:var(--gold); transform:translateY(-2px); }
+  .cmd-card-sabbath { border-color:var(--gold); background:linear-gradient(135deg,#fffdf5,#fff9ec); }
+  .cmd-num { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--gold); line-height:1; flex-shrink:0; min-width:32px; }
+  .cmd-card strong { display:block; color:var(--green-deep); font-size:0.93rem; margin-bottom:0.3rem; }
+  .cmd-card p { color:var(--muted); font-size:0.82rem; line-height:1.65; }
+
+  /* Do/dont lists */
+  .do-item { background:#f0faf4; border-left:3px solid var(--green-mid); padding:0.7rem 1rem; border-radius:2px; font-size:0.88rem; color:var(--charcoal); }
+  .dont-item { background:#fff5f5; border-left:3px solid #c0392b; padding:0.7rem 1rem; border-radius:2px; font-size:0.88rem; color:var(--charcoal); }
+
+  /* Famous SDA */
+  .famous-card { background:var(--cream); border-radius:6px; padding:1.8rem; display:flex; gap:1.2rem; border:1px solid var(--border); transition:all 0.2s; }
+  .famous-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); transform:translateY(-2px); }
+  .famous-icon { font-size:2rem; flex-shrink:0; }
+  .famous-card strong { display:block; color:var(--green-deep); font-size:1rem; margin-bottom:0.4rem; font-family:'Playfair Display',serif; }
+  .famous-card p { color:var(--muted); font-size:0.85rem; line-height:1.7; }
+
+  /* Scholar quotes */
+  .scholar-card { background:var(--white); border-radius:6px; padding:2rem; border-left:5px solid var(--gold); box-shadow:0 2px 8px rgba(0,0,0,0.05); }
+  .scholar-quote { font-family:'Playfair Display',serif; font-size:1rem; color:var(--green-deep); line-height:1.75; font-style:italic; margin-bottom:0.8rem; }
+  .scholar-source { font-size:0.8rem; font-weight:600; color:var(--muted); }
+
+  /* Departments */
+  .dept-card { background:var(--white); border:1px solid var(--border); border-radius:6px; padding:1.8rem; transition:all 0.2s; }
+  .dept-card:hover { box-shadow:0 6px 20px rgba(0,0,0,0.08); transform:translateY(-2px); border-color:var(--gold); }
+  .dept-icon { font-size:2rem; margin-bottom:0.8rem; }
+  .dept-card strong { display:block; color:var(--green-deep); font-size:0.95rem; margin-bottom:0.5rem; font-family:'Playfair Display',serif; }
+  .dept-card p { color:var(--muted); font-size:0.85rem; line-height:1.7; }
+
+  /* Health items */
+  .health-item { background:var(--cream); padding:0.8rem 1rem; border-radius:4px; font-size:0.88rem; color:var(--charcoal); }
+
+  /* News */
+  .news-card { background:var(--white); border-radius:6px; padding:1.8rem; border:1px solid var(--border); position:relative; transition:all 0.2s; }
+  .news-card:hover { box-shadow:0 4px 16px rgba(0,0,0,0.08); transform:translateY(-2px); }
+  .news-date { font-size:0.72rem; color:var(--muted); font-weight:600; margin-bottom:0.4rem; }
+  .news-badge { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:0.25rem 0.7rem; border-radius:20px; margin-bottom:0.6rem; }
+  .news-badge-new { background:#e8f8ef; color:#1a6b3a; }
+  .news-badge-event { background:#fff3e0; color:#b8500a; }
+  .news-badge-youth { background:#e8eaff; color:#3a3aa0; }
+  .news-badge-church { background:#f0f0f0; color:var(--muted); }
+  .news-title { font-family:'Playfair Display',serif; color:var(--green-deep); font-size:1.05rem; margin-bottom:0.5rem; }
+  .news-body { color:var(--muted); font-size:0.88rem; line-height:1.75; }
+
+  /* Bible Q&A quick buttons */
+  .qa-quick { background:var(--cream); border:1px solid var(--border); border-radius:20px; padding:0.4rem 1rem; font-size:0.8rem; color:var(--green-deep); cursor:pointer; font-family:'Inter',sans-serif; transition:all 0.2s; }
+  .qa-quick:hover { background:var(--green-deep); color:white; border-color:var(--green-deep); }
+
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  /* Responsive tweaks for new sections */
+  @media(max-width:768px){
+    #soul .grid-2, #spiritual-health .grid-2 { grid-template-columns:1fr !important; }
+    .about-grid, #who-we-are > div > div:last-child > div:first-child { grid-template-columns:1fr; }
+  }
+  @media(max-width:600px){
+    .hist-item { flex-direction:column; gap:0.4rem; }
+    .nav-submenu { position:static; display:none; box-shadow:none; border:none; background:rgba(0,0,0,0.2); }
+    .nav-links.open .nav-dropdown.open .nav-submenu { display:block; }
+  }
+</style>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Mountain View Seventh-day Adventist Church · Kantafu</strong><br>
+  <span style="margin-top:0.4rem;display:block;">© 2026 · Built with love for the community</span>
+</footer>
+
+<script>
+  // ── ROTATING DAILY VERSES (5 per day, cycles by hour) ──
+  const dailyVerses = [
+    // Set 1 – Monday type
+    [{t:"For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.",r:"John 3:16"},
+     {t:"I can do all things through Christ who strengthens me.",r:"Philippians 4:13"},
+     {t:"The LORD is my shepherd; I shall not want.",r:"Psalm 23:1"},
+     {t:"Trust in the LORD with all your heart and lean not on your own understanding.",r:"Proverbs 3:5"},
+     {t:"Be strong and courageous. Do not be afraid; do not be discouraged, for the LORD your God will be with you.",r:"Joshua 1:9"}],
+    // Set 2
+    [{t:"Come to Me, all you who are weary and burdened, and I will give you rest.",r:"Matthew 11:28"},
+     {t:"The LORD your God is with you, the Mighty Warrior who saves.",r:"Zephaniah 3:17"},
+     {t:"For I know the plans I have for you, declares the LORD, plans to prosper you and not to harm you.",r:"Jeremiah 29:11"},
+     {t:"And we know that in all things God works for the good of those who love Him.",r:"Romans 8:28"},
+     {t:"Cast all your anxiety on Him because He cares for you.",r:"1 Peter 5:7"}],
+    // Set 3
+    [{t:"Your word is a lamp for my feet, a light on my path.",r:"Psalm 119:105"},
+     {t:"The name of the LORD is a fortified tower; the righteous run to it and are safe.",r:"Proverbs 18:10"},
+     {t:"Be still and know that I am God.",r:"Psalm 46:10"},
+     {t:"Fear not, for I am with you; be not dismayed, for I am your God.",r:"Isaiah 41:10"},
+     {t:"I have been crucified with Christ and I no longer live, but Christ lives in me.",r:"Galatians 2:20"}],
+    // Set 4
+    [{t:"Seek first the kingdom of God and His righteousness, and all these things will be added to you.",r:"Matthew 6:33"},
+     {t:"The joy of the LORD is your strength.",r:"Nehemiah 8:10"},
+     {t:"Let all that you do be done in love.",r:"1 Corinthians 16:14"},
+     {t:"Create in me a pure heart, O God, and renew a steadfast spirit within me.",r:"Psalm 51:10"},
+     {t:"For the LORD God is a sun and shield; He bestows favour and honour.",r:"Psalm 84:11"}],
+    // Set 5
+    [{t:"But those who hope in the LORD will renew their strength. They will soar on wings like eagles.",r:"Isaiah 40:31"},
+     {t:"Rejoice always, pray continually, give thanks in all circumstances.",r:"1 Thessalonians 5:16–18"},
+     {t:"He heals the broken-hearted and binds up their wounds.",r:"Psalm 147:3"},
+     {t:"This is the day that the LORD has made; let us rejoice and be glad in it.",r:"Psalm 118:24"},
+     {t:"And my God will meet all your needs according to the riches of His glory in Christ Jesus.",r:"Philippians 4:19"}],
+    // Set 6
+    [{t:"Taste and see that the LORD is good; blessed is the one who takes refuge in Him.",r:"Psalm 34:8"},
+     {t:"No weapon formed against you shall prosper.",r:"Isaiah 54:17"},
+     {t:"If we confess our sins, He is faithful and just and will forgive us our sins.",r:"1 John 1:9"},
+     {t:"The LORD is close to the broken-hearted and saves those who are crushed in spirit.",r:"Psalm 34:18"},
+     {t:"Delight yourself in the LORD and He will give you the desires of your heart.",r:"Psalm 37:4"}],
+    // Set 7 – Sunday type
+    [{t:"Remember the Sabbath day by keeping it holy.",r:"Exodus 20:8"},
+     {t:"Come, let us bow down in worship, let us kneel before the LORD our Maker.",r:"Psalm 95:6"},
+     {t:"Give thanks to the LORD, for He is good; His love endures forever.",r:"Psalm 107:1"},
+     {t:"Blessed is the man who does not walk in step with the wicked.",r:"Psalm 1:1"},
+     {t:"The steadfast love of the LORD never ceases; His mercies never come to an end.",r:"Lamentations 3:22"}]
+  ];
+
+  function showVerse() {
+    const now = new Date();
+    const daySet = dailyVerses[now.getDay()]; // 0–6 = Sun–Sat
+    const verseIndex = Math.floor(now.getHours() / 5) % 5; // changes ~every 5 hours → 5 per day
+    const v = daySet[verseIndex];
+    document.getElementById('verseOfDay').textContent = '"' + v.t + '"';
+    document.getElementById('verseRef').textContent = '— ' + v.r;
+  }
+  showVerse();
+  // refresh every 5 hours
+  setInterval(showVerse, 1000 * 60 * 60 * 5);
+
+  // ── PRAYER SUBMIT ──
+  function submitPrayer() {
+    const confirm = document.getElementById('prayerConfirm');
+    confirm.style.display = 'block';
+    setTimeout(()=>{ confirm.style.display='none'; }, 6000);
+  }
+
+  // ── BIBLE Q&A ──
+  async function askBible() {
+    const q = document.getElementById('bibleQuestion').value.trim();
+    if (!q) return;
+    document.getElementById('bibleAnswer').style.display = 'none';
+    document.getElementById('bibleLoading').style.display = 'block';
+    try {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          model:'claude-sonnet-4-6',
+          max_tokens:1000,
+          system:`You are a Bible scholar and Seventh-day Adventist theologian answering questions for members of Mountain View SDA Church Kantafu, Kenya. Answer clearly, faithfully, and with specific Bible references. Keep answers to 3-5 paragraphs. Use a warm, pastoral tone. Always ground your answer in Scripture. When relevant, include the Seventh-day Adventist understanding of the topic.`,
+          messages:[{role:'user',content:q}]
+        })
+      });
+      const data = await res.json();
+      const answer = data.content && data.content[0] && data.content[0].text ? data.content[0].text : 'Could not retrieve an answer. Please try again.';
+      document.getElementById('bibleLoading').style.display = 'none';
+      const answerEl = document.getElementById('bibleAnswer');
+      answerEl.innerHTML = answer.replace(/\n\n/g,'</p><p style="margin-top:0.8rem;">').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
+      answerEl.style.display = 'block';
+    } catch(e) {
+      document.getElementById('bibleLoading').style.display = 'none';
+      document.getElementById('bibleAnswer').textContent = 'An error occurred. Please check your connection and try again.';
+      document.getElementById('bibleAnswer').style.display = 'block';
+    }
+  }
+  function quickAsk(q) {
+    document.getElementById('bibleQuestion').value = q;
+    askBible();
+  }
+
+  // ── NAV TOGGLE (mobile hamburger) ──
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if(window.innerWidth<=768) links.classList.remove('open'); }));
+
+  // ── RESOURCES OVERLAY ──
+  function openResources() {
+    const overlay = document.getElementById('resourcesOverlay');
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('resourceSearch').value = '';
+    filterResources('');
+  }
+  function closeResources() {
+    document.getElementById('resourcesOverlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  function closeAndGo(anchor) {
+    closeResources();
+    setTimeout(() => {
+      const el = document.querySelector(anchor);
+      if (el) el.scrollIntoView({ behavior:'smooth' });
+    }, 200);
+  }
+  function filterResources(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.res-card').forEach(card => {
+      const tags = (card.dataset.tags || '') + ' ' + (card.querySelector('.res-title')?.textContent || '') + ' ' + (card.querySelector('.res-desc')?.textContent || '');
+      card.style.display = (!q || tags.toLowerCase().includes(q)) ? 'flex' : 'none';
+    });
+  }
+  // Close overlay on Escape key
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeResources(); });
+</script>
+</body>
+</html>
